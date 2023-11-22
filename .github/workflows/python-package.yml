@@ -25,6 +25,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
+        # this should be taken care of by pip, but fails for test-pypi
+        pip install scikit-build-core nanobind
 
     - name: Install kima
       run: |
