@@ -25,12 +25,10 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        # this should be taken care of by pip, but fails for test-pypi
-        pip install scikit-build-core nanobind
 
     - name: Install kima
       run: |
-        pip install -i https://test.pypi.org/simple/ kima
+        pip install --index-url https://pypi.org/simple --extra-index-url https://test.pypi.org/simple  kima
         #pip install kima
 
     - name: Test import
