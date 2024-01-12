@@ -28,8 +28,8 @@ jobs:
 
     - name: Install kima
       run: |
-        pip install --extra-index-url https://test.pypi.org/simple  kima
-        #pip install kima
+        #pip install --extra-index-url https://test.pypi.org/simple  kima
+        pip install kima
 
     - name: Test import
       run: |
