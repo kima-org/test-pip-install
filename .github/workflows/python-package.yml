@@ -39,5 +39,4 @@ jobs:
 
     - name: Run 51Peg example
       run : |
-        python -c "import kima; from kima.examples._51Peg import _51Peg; model = _51Peg(run=True, steps=100); kima.load_results()"
-
+        python -c "from kima.examples import _51Peg; model = _51Peg(run=True, load=True, steps=100)"
