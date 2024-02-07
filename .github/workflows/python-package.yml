@@ -25,12 +25,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install --upgrade pip
+        python -m pip install --upgrade pip
 
     - name: Install kima
       run: |
         #pip install --extra-index-url https://test.pypi.org/simple  kima
-        pip install kima
+        python -m pip install kima
 
     - name: Test import
       run: |
