@@ -28,11 +28,13 @@ jobs:
         python -m pip install --upgrade pip
 
     - name: Uninstall cmake
+      if: matrix.platform == 'ubuntu-latest'
       run: |
         which cmake
         rm -rf /usr/local/bin/cmake
 
     - name: Check if cmake is installed
+      if: matrix.platform == 'ubuntu-latest'
       run: |
         if cmake --version ; then
             echo "Command succeeded"
