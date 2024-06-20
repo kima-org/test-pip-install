@@ -29,7 +29,8 @@ jobs:
 
     - name: Uninstall cmake
       run: |
-        sudo apt remove cmake
+        which cmake
+        sudo apt-get remove cmake
 
     - name: Check if cmake is installed
       run: |
