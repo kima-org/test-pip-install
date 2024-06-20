@@ -16,10 +16,10 @@ jobs:
         python-version: ["3.9", "3.10", "3.11"]
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
 
@@ -31,7 +31,7 @@ jobs:
       if: matrix.platform == 'ubuntu-latest'
       run: |
         which cmake
-        rm -rf /usr/local/bin/cmake
+        rm -rf /usr/local/bin/cmake # nuke!
 
     - name: Check if cmake is installed
       if: matrix.platform == 'ubuntu-latest'
