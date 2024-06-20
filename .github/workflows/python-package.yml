@@ -30,7 +30,7 @@ jobs:
     - name: Uninstall cmake
       run: |
         which cmake
-        sudo apt-get remove cmake
+        rm -rf /usr/local/bin/cmake
 
     - name: Check if cmake is installed
       run: |
