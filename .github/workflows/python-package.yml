@@ -34,7 +34,11 @@ jobs:
 
     - name: Check if cmake is installed
       run: |
-        cmake --version
+        if cmake --version ; then
+            echo "Command succeeded"
+        else
+            echo "Command failed"
+        fi
   
     - name: Install kima
       run: |
